@@ -1,0 +1,19 @@
+[13-Jun-2025 09:02:49 UTC] PHP Fatal error:  Uncaught Error: Call to private method SC_City_Temperature_Widget::get_temperature() from global scope in D:\wordpress\wp-content\themes\storefront-child\functions.php:242
+Stack trace:
+#0 D:\wordpress\wp-includes\class-wp-hook.php(324): sc_search_cities('')
+#1 D:\wordpress\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 D:\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 D:\wordpress\wp-admin\admin-ajax.php(192): do_action('wp_ajax_sc_sear...')
+#4 C:\Program Files\Herd\resources\app.asar.unpacked\resources\valet\server.php(139): require('D:\\wordpress\\wp...')
+#5 {main}
+  thrown in D:\wordpress\wp-content\themes\storefront-child\functions.php on line 242
+[13-Jun-2025 09:02:50 UTC] PHP Fatal error:  Uncaught Error: Call to private method SC_City_Temperature_Widget::get_temperature() from global scope in D:\wordpress\wp-content\themes\storefront-child\functions.php:242
+Stack trace:
+#0 D:\wordpress\wp-includes\class-wp-hook.php(324): sc_search_cities('')
+#1 D:\wordpress\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#2 D:\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 D:\wordpress\wp-admin\admin-ajax.php(192): do_action('wp_ajax_sc_sear...')
+#4 C:\Program Files\Herd\resources\app.asar.unpacked\resources\valet\server.php(139): require('D:\\wordpress\\wp...')
+#5 {main}
+  thrown in D:\wordpress\wp-content\themes\storefront-child\functions.php on line 242
+[13-Jun-2025 09:08:16 UTC] PHP Notice:  Функция wpdb::prepare вызвана <strong>неправильно</strong>. Аргумент запроса метода wpdb::prepare() должен содержать описатель преобразований. Дополнительную информацию можно найти на странице <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">&laquo;Отладка в WordPress&raquo;</a>. (Это сообщение было добавлено в версии 3.9.0.) in D:\wordpress\wp-includes\functions.php on line 6121

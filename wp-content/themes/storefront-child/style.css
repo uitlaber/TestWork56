@@ -1,0 +1,30 @@
+/*
+ Theme Name:   Storefront Child
+ Template:     storefront
+ Description:  Дочерняя тема для темы Storefront
+ Author:       Dastan Turysbekov
+ Version:      1.0.0
+*/
+
+.cities-search {
+    margin-bottom: 20px;
+}
+
+#city-search {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#cities-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#cities-table th,
+#cities-table td {
+    padding: 10px;
+    text-align: left;
+}
