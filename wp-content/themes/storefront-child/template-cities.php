@@ -27,6 +27,7 @@ get_header();
             <tbody>
                 <?php
                 global $wpdb;
+                $widget = new SC_City_Temperature_Widget();
                 $results = $wpdb->get_results("
                     SELECT p.post_title, t.name as country, pm1.meta_value as latitude, pm2.meta_value as longitude
                     FROM {$wpdb->posts} p
@@ -39,16 +40,7 @@ get_header();
                 ");
 
                 foreach ($results as $row) :
-                    $temperature = false;
-                    if ($row->latitude && $row->longitude) {
-                        $api_key = OPENWEATHERMAP_API_KEY; // Replace with actual API key
-                        $url = "https://api.openweathermap.org/data/2.5/weather?lat={$row->latitude}&lon={$row->longitude}&units=metric&appid={$api_key}";
-                        $response = wp_remote_get($url);
-                        if (!is_wp_error($response)) {
-                            $data = json_decode(wp_remote_retrieve_body($response));
-                            $temperature = isset($data->main->temp) ? round($data->main->temp, 1) : false;
-                        }
-                    }
+                    $temperature = $widget->get_temperature($row->latitude, $row->longitude);
                 ?>
                     <tr>
                         <td><?php echo esc_html($row->post_title); ?></td>
